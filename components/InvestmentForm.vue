@@ -46,6 +46,8 @@
 </template>
 
 <script>
+import Toast from "vue-toastification";
+import "vue-toastification/dist/index.css";
 export default {
   props: {
     investment: Object,
@@ -54,6 +56,7 @@ export default {
   data() {
     return {
       form: { ...this.investment },
+      message: { text: "", type: "" },
     };
   },
   methods: {
@@ -61,9 +64,11 @@ export default {
       try {
         const data = await this.$axios.$patch(`/investments/${this.investment.id}`, this.form);
         this.$emit("updated", data);
+        this.$toast.success("Mise à jour réussie !");
         this.closeForm();
       } catch (error) {
         console.error("Erreur lors de la mise à jour :", error);
+        this.$toast.error("Erreur lors de la mise à jour.");
       }
     },
     closeForm() {

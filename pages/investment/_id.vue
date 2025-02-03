@@ -1,5 +1,5 @@
 <template>
-  <div class='c-container'>
+  <div class='c-container mb-5'>
     <div class="card text-center">
       <div class="card-header">
         {{ investment.titreoperation }}
@@ -91,12 +91,6 @@
           </div>
         </div>
       </div>
-<!--      <div-->
-<!--        class="card-footer"-->
-<!--        :class="getStatusClass(investment.etatAvancement)"-->
-<!--      >-->
-<!--        {{ investment.etatAvancement }}-->
-<!--      </div>-->
     </div>
 
   </div>
@@ -167,7 +161,7 @@ export default {
 </script>
 <style scoped>
   .c-container{
-    height: 80vh;
+    /*height: 80vh;*/
     align-content: center;
   }
   .card-header{

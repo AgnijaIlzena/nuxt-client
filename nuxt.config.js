@@ -18,7 +18,7 @@ export default {
   css: ['~/assets/global.css'],
 
   // Plugins to run before rendering  page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/antd-ui', { src: '~/plugins/google-maps.js', ssr: false }],
+  plugins: ['@/plugins/antd-ui', { src: '~/plugins/google-maps.js', ssr: false }, { src: "~/plugins/toast.js", mode: "client" }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
