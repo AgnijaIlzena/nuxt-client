@@ -97,7 +97,7 @@ export default {
       }
 
       try {
-        const data = await this.$axios.$patch(`/investments/${this.investment.id}`, this.form);
+        const data = await this.$axios.$patch(`/investment/${this.investment.id}`, this.form);
         this.$emit("updated", data);
         this.$toast.success("Mise à jour réussie !");
         this.closeForm();

@@ -132,7 +132,6 @@ export default {
     async getInvestmentById(investmentId) {
       try {
         const { data } = await this.$axios.get(`/investment/${investmentId}`);
-        console.log("data", data);
         return data;
       } catch (e) {
         console.error("Error fetching investment:", error);
