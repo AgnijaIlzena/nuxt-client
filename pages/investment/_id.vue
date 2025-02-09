@@ -108,7 +108,6 @@ export default {
   async asyncData({ params, $axios }) {
     try {
       const data = await $axios.$get(`/investment/${params.id}`);
-      console.log("API Response:", data);
       // Extract first item if API response is an array
       const investment = Array.isArray(data) ? data[0] : data;
       return { investment };
@@ -161,7 +160,6 @@ export default {
 </script>
 <style scoped>
   .c-container{
-    /*height: 80vh;*/
     align-content: center;
   }
   .card-header{
@@ -198,9 +196,6 @@ export default {
   .btn-outline-warning{
     width: 400px;
     text-transform: uppercase;
-  }
-  .modal-body{
-    background-color: #12355B;
   }
   @media (min-width: 1200px) {
     .c-container {

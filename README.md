@@ -9,6 +9,12 @@ $ npm install
 # serve with hot reload at localhost:3000, navigate to http://localhost:3000/  (Make sure you use http instead of https).
 $ npm run dev
 
+# localhost:3000
+# The list of investment data will be available at the '/' route. 
+# Ensure that both the REST API (symfony-rest-api) server and the database server are running before starting the Nuxt server.
+
+# This nuxt-client web application is compatible with the REST API 'symfony-rest-api' project.
+
 ```
 ##### build for production and launch server
 $ npm run build
